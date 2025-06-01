@@ -96,14 +96,12 @@ const App = () => {
     const extraValue = randomValue();
     if (extraValue) {
       setIsPrank(true);
-      // displayElm.classList.add("prank");
+
       audio.play();
     }
 
     const total = eval(strToDisplay) + extraValue;
     setStrToDisplay(total.toString());
-
-    //   console.log(total);
   };
 
   const handleOnButtonClick = (value) => {
@@ -154,7 +152,6 @@ const App = () => {
           >
             {strToDisplay || "0.00"}
           </div>
-          {/* <div className="btn btn-ac">AC</div> */}
 
           {btns.map((btn, i) => (
             <Button
@@ -164,7 +161,6 @@ const App = () => {
               handleOnMouseDown={handleOnMouseDown}
               btnStyle={btnStyle}
             />
-            // <Button key={i} cls={btn.cls} label={btn.label} />
           ))}
         </div>
       </div>
